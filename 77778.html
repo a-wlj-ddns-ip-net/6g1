@@ -13,7 +13,7 @@
         }
         
         /* 编辑区域样式：增加淡蓝色背景提醒点击 */
-        #master-a, #master-a2 {
+        #master-a, #master-a2, #master-a3 {
             color: #000;
             text-decoration: underline dashed #1a73e8;
             background-color: #f0f7ff;
@@ -25,7 +25,7 @@
         }
 
         /* 自动同步的文字样式 */
-        .slave-a, .slave-a2 { 
+        .slave-a,.slave-a3, .slave-a2 { 
             color: inherit; 
             border-bottom: 1px solid transparent;
         }
@@ -54,6 +54,15 @@
             el.innerText = val2;
         });
     }
+ // 同步负责人人名2
+    function sync3() {
+        let val3 = document.getElementById('master-a3').innerText;
+        const slaves3 = document.querySelectorAll('.slave-a3');
+        slaves3.forEach(el => {
+            el.innerText = val3;
+        });
+    }
+
 </script>
 
 
@@ -129,18 +138,18 @@
 1、 公司安全事故应急设总指挥、副总指挥、警戒组、灭火组、拆卸组、救护组、疏散组、支援（财务和车队）。<br>
 （1） 指挥负责总公司安全事故应急预案的制定、修改和审批工作。督促各部门、各车间制定事故应急救援预案并严格执行。负责事故救援的指挥工作以及重点场所的实施演习的组织工作；<br>
 （2） 副总指挥负责协助总指挥召集所属事故救援人员从事救援工作，并依分工迅速顺利进行。<br>
-2、 灭火组长<span id="master-a2" contenteditable="true" oninput="sync2()">点击输入人名</span>，成员由_____________组成，其职责：<br>
+2、 灭火组长<span id="master-a2" contenteditable="true" oninput="sync2()">点击输入人名</span>，成员由<span id="master-a3" contenteditable="true" oninput="sync3()">点击输入人名</span>组成，其职责：<br>
 （1） 当遇到火警时，全体人员火速赶到现场，接受指挥参加灭火行动；<br>
 （2） 了解建筑物内外格局及修改后的状况；<br>
 （3） 了解电及可燃物所铺设的路线；<br>
 （4） 了解内部装修材料的性质以及燃料的种类；<br>
 （5） 了解消防设施的放置地点，并正确使用；<br>
 （6） 了解火的走势和逃生路线。<br>
-3、 拆卸组长<span class="slave-a2">点击输入人名</span>，成员由___________组成，其职责；<br>
+3、 拆卸组长<span class="slave-a2">点击输入人名</span>，成员由<span class="slave-a3">点击输入人名</span>组成，其职责；<br>
 （1） 责拆除所有障碍物；<br>
 （2） 负责水源疏导；<br>
 （3） 负责电源及可燃物切断。<br>
-4、 警戒组组长<span class="slave-a2">点击输入人名</span>，成员由__________组成，其职责：<br>
+4、 警戒组组长<span class="slave-a2">点击输入人名</span>，成员由<span class="slave-a3">点击输入人名</span>组成，其职责：<br>
 （1） 对公司的建筑内外格局深入了解；<br>
 （2） 维持事故现场秩序，保留现场物证。<br>
 （3） 视火情必要时，在出入口要有人员负责阻止离去的人员再次进入火灾现场取物品和钱财；<br>
@@ -148,7 +157,7 @@
 5、救护组组长<span class="slave-a2">点击输入人名</span>，成员由公司医疗队员组成，其职责：<br>
 （1） 携带急救器械和药品奔赴灾害现场抢救伤员；<br>
 （2） 应了解所有逃生路线；<br>
-6、 通讯组组长<span class="slave-a2">点击输入人名</span>，成员由___________组成，其职责：<br>
+6、 通讯组组长<span class="slave-a2">点击输入人名</span>，成员由<span class="slave-a3">点击输入人名</span>组成，其职责：<br>
 （1） 公司警铃设备及广播所在地；<br>
 （2） 了解公司所有通讯设备的所在地及使用方法；<br>
 （3） 了解建筑物品的格局、材料性质以及火的走势；<br>
