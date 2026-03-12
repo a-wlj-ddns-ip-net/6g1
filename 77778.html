@@ -1,60 +1,82 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="utf-8">
-    <title>安全生产相关文件</title>
+    <meta charset="UTF-8">
+    <title>制度模板</title>
     <style>
-        body {
-            font-family: "Microsoft YaHei", Arial, sans-serif;
+        body { 
+            font-family: "Microsoft YaHei", sans-serif; 
             margin: 20px;
-            padding: 20px;
+            padding: 20px; 
+            color: #000; 
+            line-height: 1.6;
         }
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
+        
+        /* 编辑区域样式：增加淡蓝色背景提醒点击 */
+        #master-a, #master-a2 {
+            color: #000;
+            text-decoration: underline dashed #1a73e8;
+            background-color: #f0f7ff;
+            padding: 0 4px;
+            cursor: text;
+            outline: none;
+            display: inline-block;
+            min-width: 50px;
         }
-        /* 只有第一个部分有边框 */
-        .section-bordered {
-            page-break-before: always; /* 打印时新页面 */
-            padding: 20px;
-            border: 2px solid #000;
-            margin-bottom: 40px;
+
+        /* 自动同步的文字样式 */
+        .slave-a, .slave-a2 { 
+            color: inherit; 
+            border-bottom: 1px solid transparent;
         }
-        /* 其他部分不带边框 */
-        .section {
-            page-break-before: always;
-            padding: 20px;
-            margin-bottom: 40px;
-            border: none;
-        }
-        .section:first-child {
-            page-break-before: auto; /* 第一部分不分页 */
-        }
+
+        h2, h3 { text-align: center; }
+        .section { margin-bottom: 50px; page-break-after: always; }
     </style>
 </head>
 <body>
- 
+
+<script>
+    // 同步公司名称
+    function sync() {
+        let val = document.getElementById('master-a').innerText;
+        const slaves = document.querySelectorAll('.slave-a');
+        slaves.forEach(el => {
+            el.innerText = val;
+        });
+    }
+
+    // 同步负责人人名
+    function sync2() {
+        let val2 = document.getElementById('master-a2').innerText;
+        const slaves2 = document.querySelectorAll('.slave-a2');
+        slaves2.forEach(el => {
+            el.innerText = val2;
+        });
+    }
+</script>
+
 
     <div class="section">
-        <h2 style="text-align: center;">______________公司领导班子安全生产专题会议</h2><br>
-        <p>
+        <h3 style="text-align: center;"><span id="master-a" contenteditable="true" oninput="sync()">XXX公司</span>领导班子安全生产专题会议</h3><br>
+        <p style="font-size: 15px;">
   &emsp;&emsp;为做好本公司复工复产工作，加强对复工安全生产的认识，始终坚持“安全第一，预防为主，综合治理”的方针，坚决克服盲目乐观、麻痹松懈的思想，切实强化节后复工安全生产工作，保障生产工作顺利开展，消除各类安全隐患，现结合公司实际情况，开展领导班子安全生产专题会议，现将会议内容纪要如下。<br><br>
   一、建立健全落实本公司全员安全生产责任制，加强安全生产标准化建设，有序开展复工复产工作，开展企业领导班子安全生产专题会议，制定一份周密复工复产安全生产工作方案，召开一次全体员工大会，开展一次全员安全教育培训，制定一套应急处置方案，开展一次全厂性安全检查。<br><br>
   二、更新本公司安全生产规章制度、机械设备的操作规程、生产安全事故应急救援预案。<br><br>
   三、组织并参与本公司安全生产教育和培训，如实记录安全生产教育和培训情况；对节后新进员工，必须进行岗前操作安全培训，未经培训和三级安全教育不合格的，一律不得上岗作业。<br><br>
   四、组织开展消防疏散应急演练活动，加强员工安全生产意识，提升安全应急能力，熟悉常规安全救援知识，掌握救援器材的使用，以便在突发险情事故时，做到遇事不乱，遇情不慌，采取积极有效措施进行自救和救援他人。<br>
   五、检查本企业的安全生产状况，及时排查生产安全的事故隐患，提出改进安全生产管理的建议。<br><br>
-  六、制定本公司安全生产投入和计划。<br><br><br><br><br><br><br>
+  六、制定本公司安全生产投入和计划。<br><br><br><br><br><br>
 </p>
 <p style="text-align: right;">
   ________________（盖章）<br><br><br>
-  年&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;日
+  年&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;日<br><br><br>
 </p>
     </div>
 
     <div class="section">
-        <h2 style="text-align: center;">______________企业复工复产安全生产方案</h2><br>
-        <p>&emsp;&emsp;为了强化施工现场安全生产管理，保障节后生产工作顺利开展，消除各类安全隐患，特制订复工检查方案，并根据《复工检查方案》在复工前对生产工作进行全面检查。<br> 　　
+        <h3 style="text-align: center;"><span class="slave-a">XXX公司</span>企业复工复产安全生产方案</h3>
+        <p style="font-size: 16px;">&emsp;&emsp;为了强化施工现场安全生产管理，保障节后生产工作顺利开展，消除各类安全隐患，特制订复工检查方案，并根据《复工检查方案》在复工前对生产工作进行全面检查。<br> 　　
 一、检查内容<br>　　
 1. 开展节后复工的安全生产条件检查，如检查现场地面、墙面等是否存在安全隐患因素。 <br>　　
 2. 强化对关键环节和重点部位的复工检查，查看生产设备安全防护是否存在异常，对消防设备进行全部检查、更换过期、失效的消防设备，并对消防栓、水带、消防架、消防箱进行逐个检查；<br> 　　
@@ -72,12 +94,12 @@
 （四）强化复工前的安全培训和教育 <br>　　
 1、要认真落实三级安全教育，复工前组织现场生产人员集中开展安全知识教育培训，强调复工后的安全注意事项，着力提升生产员工的自我防护意识，特别是对节后新进的新员工，必须进行岗前操作安全培训，未经培训和三级安全教育不合格的，一律不得上岗作业。<br> 　　
 2、严格执行特种作业人员持证上岗制度，无特种作业操作证或操作证过期的人员，一律不得上岗作业，切实从源头上减少安全隐患，确保节后安全生产的顺利展开。 　　
-</p>
+</p><br>
     </div>
 
     <div class="section">
-        <h2 style="text-align: center;">______________企业召开一次全体员工大会</h2><br>
-        <p>各位员工：<br><br>
+        <h3 style="text-align: center;"><span class="slave-a">XXX公司</span>召开一次全体员工大会</h3><br>
+        <p style="font-size: 14px;">各位员工：<br><br>
 &emsp;&emsp;为做好本公司复工复产工作，保障节后生产工作顺利开展，消除各类安全隐患，现结合公司实际情况,召开一次全体员工大会。<br><br>
 一、加强组织	<br><br>
 &emsp;&emsp;为贯彻落实国家、省、市和镇对节后复工复产安全生产工作的部署要求，加强对复工复产安全生产工作的落实。<br><br>
@@ -88,17 +110,17 @@
 （四）全体员工要做好防止机械伤害、_________________________________________等安全知识。<br>
 （五）公司已为各员工配备____________________________________________________等劳动保护用品，上岗期间，各员工必须佩戴好劳动保护用品，禁止在作业场所、仓库等重点危险区域抽烟，时刻注意个人卫生和做好日常个人健康检测。<br><br>
 三、强调要求<br><br>
-&emsp;&emsp;各车间部门负责人要切实负起责任，勇于承担责任，加强内部管理，各位员工要加强自己的使命感和责任感，服从各主管的分配和领导，做好自己的本职工作，希望大家密切配合，团结协作，共创辉煌。<br><br><br><br><br><br><br>
+&emsp;&emsp;各车间部门负责人要切实负起责任，勇于承担责任，加强内部管理，各位员工要加强自己的使命感和责任感，服从各主管的分配和领导，做好自己的本职工作，希望大家密切配合，团结协作，共创辉煌。<br><br><br><br><br><br>
 </p><p style="text-align: right;">
-  ________________（盖章）<br><br><br>
-  年&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;日
+  ________________（盖章）<br><br>
+  年&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;日<br><br><br><br><br>
 </p>
 
     </div>
 
     <div class="section">
-        <h2 style="text-align: center;">______________企业安全应急处置方案</h2><br>
-        <p>
+        <h3 style="text-align: center;"><span class="slave-a">XXX公司</span>企业安全应急处置方案</h3><br>
+        <p style="font-size: 15px;">
 一、目的<br>
 为了全面贯彻“安全第一、预防为主”的方针，使安全事故的抢救工作能充分发挥组织功能，确保事故急救援工作高效有序进行，把事故灾害降到最低程度，避免延误抢救的时效，造成重大人员伤亡。根据《安全生产法》、《消防法》以及有关法律法规的要求，结合我公司实际情况，制订本预案。<br>
 二、本公司范围<br>
@@ -107,31 +129,31 @@
 1、 公司安全事故应急设总指挥、副总指挥、警戒组、灭火组、拆卸组、救护组、疏散组、支援（财务和车队）。<br>
 （1） 指挥负责总公司安全事故应急预案的制定、修改和审批工作。督促各部门、各车间制定事故应急救援预案并严格执行。负责事故救援的指挥工作以及重点场所的实施演习的组织工作；<br>
 （2） 副总指挥负责协助总指挥召集所属事故救援人员从事救援工作，并依分工迅速顺利进行。<br>
-2、 灭火组长_______，成员由_____________组成，其职责：<br>
+2、 灭火组长<span id="master-a2" contenteditable="true" oninput="sync2()">点击输入人名</span>，成员由_____________组成，其职责：<br>
 （1） 当遇到火警时，全体人员火速赶到现场，接受指挥参加灭火行动；<br>
 （2） 了解建筑物内外格局及修改后的状况；<br>
 （3） 了解电及可燃物所铺设的路线；<br>
 （4） 了解内部装修材料的性质以及燃料的种类；<br>
 （5） 了解消防设施的放置地点，并正确使用；<br>
 （6） 了解火的走势和逃生路线。<br>
-3、 拆卸组长_________ 成员由___________组成，其职责；<br>
+3、 拆卸组长<span class="slave-a2">点击输入人名</span>，成员由___________组成，其职责；<br>
 （1） 责拆除所有障碍物；<br>
 （2） 负责水源疏导；<br>
 （3） 负责电源及可燃物切断。<br>
-4、 警戒组组长_________，成员由__________组成，其职责：<br>
+4、 警戒组组长<span class="slave-a2">点击输入人名</span>，成员由__________组成，其职责：<br>
 （1） 对公司的建筑内外格局深入了解；<br>
 （2） 维持事故现场秩序，保留现场物证。<br>
 （3） 视火情必要时，在出入口要有人员负责阻止离去的人员再次进入火灾现场取物品和钱财；<br>
 （4） 阻止歹徒趁火打劫。<br>
-5、救护组组长_________成员由公司医疗队员组成，其职责：<br>
+5、救护组组长<span class="slave-a2">点击输入人名</span>，成员由公司医疗队员组成，其职责：<br>
 （1） 携带急救器械和药品奔赴灾害现场抢救伤员；<br>
 （2） 应了解所有逃生路线；<br>
-6、 通讯组组长_________成员由___________组成，其职责：<br>
+6、 通讯组组长<span class="slave-a2">点击输入人名</span>，成员由___________组成，其职责：<br>
 （1） 公司警铃设备及广播所在地；<br>
 （2） 了解公司所有通讯设备的所在地及使用方法；<br>
 （3） 了解建筑物品的格局、材料性质以及火的走势；<br>
 （4） 了解所有逃生路线，疏导人员逃生。<br>
-7、后备支援组组长由_____________组成，其职责：<br>
+7、后备支援组组长<span class="slave-a2">,点击输入人名</span>，其职责：<br>
 （1） 达救灾人员及器械赶赴事发现场；<br>
 （2） 及时护送伤员办理入医院手续和保障医治资金；<br>
 （3） 及时送达消防所需器械、物品到事故现场；<br>
@@ -194,5 +216,7 @@
 
     
 
-    </body>
+    
+
+</body>
 </html>
